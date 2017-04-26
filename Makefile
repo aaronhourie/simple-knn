@@ -10,7 +10,7 @@ dataset.o: src/dataset.cpp
 test-all: memcheck
 
 memcheck:
-	valgrind --leak-check=full --show-leak-kinds=all ./knn -t data/train -s data/test
+	valgrind --leak-check=full --show-leak-kinds=all ./knn -r data/train_data.txt -s data/test_data.txt -k 10 -v 0
 
 clean:
 	-rm build/dataset.o
